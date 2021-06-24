@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: azure-managed-disk
+spec:
+  accessModes:
+  - ReadWriteOnce
+  # can be chage with another sc #kubectl get sc
+  storageClassName: default #standard ssd lrs
+  resources:
+    requests:
+      storage: 5Gi
